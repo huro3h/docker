@@ -15,6 +15,7 @@ services:
     volumes:
     # 永続化する時のマウントするディレクトリ
     - ./db/data:/var/lib/mysql
+    # mysqlサーバの設定ファイルをマウント
     - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
     # 初期データ投入時。今の所使ってない
     - ./db/sql:/docker-entrypoint-initdb.d
